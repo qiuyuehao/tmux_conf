@@ -35,7 +35,7 @@ if [ $? != 0 ]; then
   $cmd neww -n adb -t $session
   tmux send -t "sec_dragon:adb" "cd ~/sec_dragon/IntrinsycDragonBoard810-AndroidBSP-MM-3.0/Source_Package/APQ8094_LA.BF64.1.2.2-01640-8x94.0_MM_V30;cd out/target/product/msm8994" ENTER "adb wait-for-devices;adb root;adb root;adb wait-for-devices" ENTER
   $cmd neww -n git -t $session
-  tmux send -t "sec_dragon:adb" "cd ~/sec_dragon/IntrinsycDragonBoard810-AndroidBSP-MM-3.0/Source_Package/APQ8094_LA.BF64.1.2.2-01640-8x94.0_MM_V30;cd kernel;git branch;git status" ENTER
+  tmux send -t "sec_dragon:git" "cd ~/sec_dragon/IntrinsycDragonBoard810-AndroidBSP-MM-3.0/Source_Package/APQ8094_LA.BF64.1.2.2-01640-8x94.0_MM_V30;cd kernel;git branch;git status" ENTER
 
   $cmd selectw -t $session:1
   $cmd selectp -t 1
